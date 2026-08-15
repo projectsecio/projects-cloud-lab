@@ -1,0 +1,25 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Enumerate",
+      "Effect": "Allow",
+      "Action": [
+        "sts:GetCallerIdentity",
+        "iam:GetUser",
+        "iam:ListAttachedUserPolicies",
+        "iam:ListUserPolicies",
+        "iam:GetUserPolicy",
+        "iam:ListPolicies",
+        "s3:ListAllMyBuckets"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "IntentionalWeaknessSelfPrivEsc",
+      "Effect": "Allow",
+      "Action": "iam:PutUserPolicy",
+      "Resource": "arn:aws:iam::<ACCOUNT_ID>:user/lab-attacker"
+    }
+  ]
+}

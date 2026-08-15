@@ -1,0 +1,7 @@
+ProjectX Q3 Roadmap (INTERNAL)
+
+- Migrate portal document store to a scoped-read bucket policy.
+- Add prefix allow-listing to the /view endpoint.
+- Rotate legacy developer access keys (see backup/).
+
+This file is intentionally reachable only by exploiting the portal IDOR.

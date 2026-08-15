@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ app_name }}</title>
+  <style>
+    :root { --bg:#0f1220; --card:#1a1f36; --accent:#6c8cff; --text:#e7e9f3; --muted:#9aa3c7; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+           background: radial-gradient(1200px 600px at 20% -10%, #22284a, var(--bg));
+           color: var(--text); min-height:100vh; }
+    header { display:flex; align-items:center; gap:.75rem; padding:1.25rem 2rem;
+             border-bottom:1px solid #262c4a; }
+    .logo { width:36px; height:36px; border-radius:9px;
+            background:linear-gradient(135deg,var(--accent),#9b6cff); }
+    .brand { font-weight:700; letter-spacing:.3px; }
+    main { max-width:960px; margin:0 auto; padding:3rem 1.5rem; }
+    .hero h1 { font-size:2.4rem; margin:0 0 .5rem; }
+    .hero p { color:var(--muted); font-size:1.1rem; max-width:640px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+            gap:1rem; margin-top:2.5rem; }
+    .card { background:var(--card); border:1px solid #262c4a; border-radius:14px;
+            padding:1.25rem 1.4rem; }
+    .card h3 { margin:.2rem 0 .4rem; }
+    .card p { color:var(--muted); margin:0; font-size:.95rem; }
+    a.btn { display:inline-block; margin-top:2rem; padding:.7rem 1.2rem;
+            background:var(--accent); color:#0b0e1c; font-weight:600;
+            border-radius:10px; text-decoration:none; }
+    footer { color:var(--muted); text-align:center; padding:2rem; font-size:.85rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"></div>
+    <div class="brand">{{ app_name }}</div>
+  </header>
+  <main>
+    <section class="hero">
+      <h1>Welcome to ProjectX</h1>
+      <p>Your secure hub for brochures, onboarding material, and shared
+         customer documents. Files are served from the ProjectX document store.</p>
+      <a class="btn" href="{{ url_for('documents') }}">Browse documents</a>
+    </section>
+    <section class="grid">
+      <div class="card"><h3>Document store</h3><p>Backed by S3 bucket
+        <code>{{ bucket }}</code>.</p></div>
+      <div class="card"><h3>Onboarding</h3><p>Brochures and terms for new
+        customers.</p></div>
+      <div class="card"><h3>Support</h3><p>Reach the ProjectX team any time.</p></div>
+    </section>
+  </main>
+  <footer>ProjectX — internal lab environment. Not for production use.</footer>
+</body>
+</html>

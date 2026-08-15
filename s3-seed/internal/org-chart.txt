@@ -1,0 +1,9 @@
+ProjectX Org Chart (INTERNAL — not for public/ prefix)
+
+CEO: A. Example
+  VP Eng: B. Example
+    Cloud Team Lead: C. Example
+  VP Sales: D. Example
+
+NOTE: This file lives under internal/ and should never be reachable from the
+public portal. If you can read this via the web app, that is the IDOR (V1).

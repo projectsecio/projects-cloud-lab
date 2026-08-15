@@ -1,0 +1,23 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadWholeBucket",
+      "Effect": "Allow",
+      "Action": ["s3:GetObject", "s3:ListBucket"],
+      "Resource": [
+        "arn:aws:s3:::projectx-portal-lab",
+        "arn:aws:s3:::projectx-portal-lab/*"
+      ]
+    },
+    {
+      "Sid": "BootstrapReadCodeBucket",
+      "Effect": "Allow",
+      "Action": ["s3:GetObject", "s3:ListBucket"],
+      "Resource": [
+        "arn:aws:s3:::projectx-portal-lab-code",
+        "arn:aws:s3:::projectx-portal-lab-code/*"
+      ]
+    }
+  ]
+}

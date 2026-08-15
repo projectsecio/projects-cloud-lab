@@ -1,0 +1,4 @@
+ProjectX Terms of Service (Lab Sample)
+
+1. This is a benign lab document.
+2. No real terms apply. This environment is for security training only.

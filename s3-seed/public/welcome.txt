@@ -1,0 +1,4 @@
+Welcome to the ProjectX Customer Portal!
+
+This is a public onboarding document. Anyone with portal access can read files
+under the public/ prefix. For help, contact support@projectx.example.

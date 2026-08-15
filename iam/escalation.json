@@ -1,0 +1,15 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "EscalatedLabScopedAccess",
+      "Effect": "Allow",
+      "Action": ["s3:*", "iam:List*", "iam:Get*"],
+      "Resource": [
+        "arn:aws:s3:::projectx-portal-lab",
+        "arn:aws:s3:::projectx-portal-lab/*",
+        "*"
+      ]
+    }
+  ]
+}

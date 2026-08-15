@@ -1,0 +1,17 @@
+[Unit]
+Description=ProjectX Customer Portal (CA101 Cloud Lab)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=projectx
+WorkingDirectory=/opt/projectx-portal
+Environment=PROJECTX_BUCKET=projectx-portal-lab
+Environment=AWS_REGION=us-east-1
+ExecStart=/opt/projectx-portal/.venv/bin/gunicorn --bind 0.0.0.0:8080 app:app
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
